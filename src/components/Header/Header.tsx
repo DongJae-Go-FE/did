@@ -72,10 +72,10 @@ export default function Header() {
                   setIsOpen(false);
                 }}
               >
-                <Link href="/introduction/nave" className={LinkStyle}>
+                <Link href="/send" className={LinkStyle}>
                   <span
                     className={`${
-                      pathName.includes("introduction")
+                      pathName.includes("send")
                         ? oneDepthOnStyle
                         : oneDepthStyle
                     } ${liSpanStyle}`}
@@ -86,34 +86,15 @@ export default function Header() {
                 <div className={depthStyle}>
                   <ul className={depthUlStyle}>
                     <li className={depthLiStyle}>
-                      <Link
-                        className={depthLinkStyle}
-                        href="/introduction/nave"
-                      >
+                      <Link className={depthLinkStyle} href="/send">
                         <span
                           className={`${depthSpanStyle} ${
-                            pathName === "/introduction/nave"
+                            pathName === "/send"
                               ? twoDepthOnStyle
                               : twoDepthStyle
                           }`}
                         >
-                          메뉴2
-                        </span>
-                      </Link>
-                    </li>
-                    <li className={depthLiStyle}>
-                      <Link
-                        className={depthLinkStyle}
-                        href="/introduction/priest"
-                      >
-                        <span
-                          className={`${depthSpanStyle} ${
-                            pathName === "/introduction/priest"
-                              ? twoDepthOnStyle
-                              : twoDepthStyle
-                          }`}
-                        >
-                          메뉴
+                          등록
                         </span>
                       </Link>
                     </li>

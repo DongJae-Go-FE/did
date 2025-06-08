@@ -2,12 +2,19 @@
 
 import Script from "next/script";
 import { useCallback, useRef, useEffect } from "react";
+import { createRoot } from "react-dom/client";
+import Marker from "../Marker";
+import data from "./data";
 
 const mapId = "naver-map";
 
 export type NaverMap = naver.maps.Map;
 
-export default function Map() {
+export default function Map({
+  onChangeValue,
+}: {
+  onChangeValue: (value: string) => void;
+}) {
   const mapRef = useRef<NaverMap>(null);
 
   const initializeMap = useCallback(() => {
@@ -20,16 +27,30 @@ export default function Map() {
         position: naver.maps.Position.BOTTOM_LEFT,
       },
     };
+
     const map = new window.naver.maps.Map(mapId, mapOptions);
     mapRef.current = map;
 
-    const markerOptions = {
-      position: new naver.maps.LatLng(37.4316116, 126.8002703),
-      map: map,
-    };
+    data.forEach((diocese) => {
+      const markerContainer = document.createElement("div");
+      markerContainer.className = "custom-marker";
 
-    new naver.maps.Marker(markerOptions);
-  }, []);
+      const root = createRoot(markerContainer);
+      root.render(<Marker onClick={() => onChangeValue(diocese.name)} />);
+
+      new window.naver.maps.Marker({
+        position: new window.naver.maps.LatLng(
+          diocese.latitude,
+          diocese.longitude
+        ),
+        map,
+        icon: {
+          anchor: new naver.maps.Point(15, 30),
+          content: markerContainer,
+        },
+      });
+    });
+  }, [onChangeValue]);
 
   useEffect(() => {
     if (window.naver && window.naver.maps) {

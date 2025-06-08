@@ -83,35 +83,17 @@ export default function Menu({
         </div>
         <ul>
           <li>
-            <Accordion
-              title="성당 소개"
-              isOpen={pathName.includes("introduction")}
-            >
+            <Accordion title="메뉴1" isOpen={pathName.includes("send")}>
               <ul>
                 <li>
                   <Link
-                    href="/introduction/nave"
+                    href="/send"
                     className={`${menuLiStyle} ${
-                      pathName === "/introduction/nave"
-                        ? menuLiTextOnStyle
-                        : menuLiTextStyle
+                      pathName === "/send" ? menuLiTextOnStyle : menuLiTextStyle
                     }`}
                     onClick={onClose}
                   >
-                    본당 소개
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/introduction/priest"
-                    className={`${menuLiStyle} ${
-                      pathName === "/introduction/priest"
-                        ? menuLiTextOnStyle
-                        : menuLiTextStyle
-                    }`}
-                    onClick={onClose}
-                  >
-                    사제
+                    등록
                   </Link>
                 </li>
               </ul>

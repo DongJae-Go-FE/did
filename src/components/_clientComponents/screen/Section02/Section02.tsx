@@ -1,6 +1,12 @@
+"use client";
+
+import { useState } from "react";
+
 import Map from "@/components/Map/Map";
 
-export default async function Section02() {
+export default function Section02() {
+  const [mapValue, setMapValue] = useState("서울대교구");
+
   const leftBoxStyle =
     "mobile:w-full mobile:border-b mobile:border-[#d9d9d9] mobile:pb-[16dvw] tablet:w-full tablet:border-b tablet:border-[#d9d9d9] tablet:pb-[10dvw] desktop:flex-1 desktop:border-b-0 desktop:border-r desktop:border-[#d9d9d9] desktop:pr-[120px] desktop:pb-0";
   const rightBoxStyle =
@@ -11,9 +17,9 @@ export default async function Section02() {
       <h2>교구 소개</h2>
       <div className="mobile:flex-wrap tablet:flex-wrap flex">
         <div className={leftBoxStyle}>
-          <Map />
+          <Map onChangeValue={(value) => setMapValue(value)} />
         </div>
-        <div className={rightBoxStyle}></div>
+        <div className={rightBoxStyle}>{mapValue}</div>
       </div>
     </div>
   );
