@@ -3,7 +3,7 @@ export default async function Section03() {
   const labelBeforeStyle =
     "before:absolute h-20 before:-bottom-[1px] before:h-[2px] before:w-0 before:bg-black before:content-[''] before:transition-[width] before:duration-[500ms] group-has-checked:before:w-full";
   const labelStyle = `cursor-pointer flex items-center justify-between relative body01r mobile:text-lg! border-b border-b-[#e6e6e6] ${labelBeforeStyle}`;
-  const labelTitleStyle = "w-3/4 inline-block truncate";
+  const labelTitleStyle = "w-5/6 inline-block truncate";
 
   const contentContainerStyle =
     "grid grid-rows-[0fr] overflow-hidden transition-[grid-template-rows] group-has-checked:grid-rows-[1fr]";
