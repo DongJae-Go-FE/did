@@ -16,15 +16,19 @@ export default async function Section03() {
     "position-center block h-5 w-1 rotate-180 bg-black transition-transform duration-[300ms] group-has-checked:rotate-90";
 
   const faqData = [
-    { id: "faq1", title: "테스트1", content: "내용입니다1" },
-    { id: "faq2", title: "테스트2", content: "내용입니다2" },
+    {
+      id: "faq1",
+      title: "접수를 하려면 어떤식으로 해야하나요?",
+      content: "접수하면 됩니다.",
+    },
+    { id: "faq2", title: "교구청 홈페이지를 어떤 식으로 이동하나요", content: "내용입니다2" },
     { id: "faq3", title: "테스트3", content: "내용입니다3" },
     { id: "faq4", title: "테스트4", content: "내용입니다4" },
     { id: "faq5", title: "테스트5", content: "내용입니다5" },
   ];
 
   return (
-    <div className="p-[3vw]">
+    <div className="p-[3vw] bg-gray-100">
       <h2>자주 묻는 질문</h2>
       <div className="flex h-[calc(100%-128px)] mobile:flex-wrap tablet:flex-wrap">
         <ul className="flex w-full flex-col">

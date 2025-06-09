@@ -318,6 +318,45 @@
   @apply absolute top-0 left-0 z-10 h-full w-full backdrop-brightness-[58%];
 }
 
+@utility description-table {
+  @apply w-full table-fixed;
+
+  th {
+    @apply px-4 py-6 bg-gray-100 border-gray-200 desktop:body02m mobile:body01m text-gray-800;
+  }
+
+  thead {
+    tr {
+      th {
+        @apply border-t;
+      }
+    }
+  }
+
+  tbody {
+    tr {
+      th {
+        @apply border-b border-r;
+      }
+
+      td {
+        @apply px-4 py-1 bg-white border-b border-r border-gray-200 desktop:body02m mobile:body01m;
+
+        &:last-of-type {
+          @apply border-r-0 has-[button[data-state=checked]]:bg-gray-300;
+        }
+      }
+
+      &:first-of-type {
+        th,
+        td {
+          @apply border-t border-t-gray-200;
+        }
+      }
+    }
+  }
+}
+
 @layer utilities {
   h2 {
     @apply heading02b mb-10 has-[a]:flex has-[a]:items-center has-[a]:justify-between;
