@@ -524,7 +524,9 @@ export default function Section02() {
 
   return (
     <div className="p-[3vw] bg-white">
-      <h2>교구 소개</h2>
+      <h2>
+        교구 소개 <span className="body02m">(마커를 클릭해주세요)</span>
+      </h2>
       <div className="mobile:flex-wrap tablet:flex-wrap flex">
         <div className={leftBoxStyle}>
           <Map onChangeValue={(value) => setMapValue(value)} />
