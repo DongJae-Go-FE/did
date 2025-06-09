@@ -457,7 +457,7 @@ export default function Section02() {
             </tbody>
           </table>
         );
-      case "원주교구":
+      case "마산교구":
         return (
           <table className="description-table">
             <tbody>

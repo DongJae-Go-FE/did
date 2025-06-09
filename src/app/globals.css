@@ -322,7 +322,7 @@
   @apply w-full table-fixed;
 
   th {
-    @apply px-4 py-6 bg-gray-100 border-gray-200 desktop:body02m mobile:body01m text-gray-800;
+    @apply px-4 py-6 bg-gray-100 border-gray-200 body02m text-gray-800;
   }
 
   thead {
@@ -340,7 +340,7 @@
       }
 
       td {
-        @apply px-4 py-1 bg-white border-b border-r border-gray-200 desktop:body02m mobile:body01m;
+        @apply px-4 py-1 bg-white border-b border-r border-gray-200 body02m;
 
         &:last-of-type {
           @apply border-r-0 has-[button[data-state=checked]]:bg-gray-300;
