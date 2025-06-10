@@ -83,7 +83,39 @@ export default function Menu({
         </div>
         <ul>
           <li>
-            <Accordion title="메뉴1" isOpen={pathName.includes("send")}>
+            <Accordion title="DID" isOpen={pathName.includes("did")}>
+              <ul>
+                <li>
+                  <Link
+                    href="/did/introduce"
+                    className={`${menuLiStyle} ${
+                      pathName === "/did/introduce"
+                        ? menuLiTextOnStyle
+                        : menuLiTextStyle
+                    }`}
+                    onClick={onClose}
+                  >
+                    DID란
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/did/date"
+                    className={`${menuLiStyle} ${
+                      pathName === "/did/date"
+                        ? menuLiTextOnStyle
+                        : menuLiTextStyle
+                    }`}
+                    onClick={onClose}
+                  >
+                    DID 일정
+                  </Link>
+                </li>
+              </ul>
+            </Accordion>
+          </li>
+          <li>
+            <Accordion title="등록" isOpen={pathName.includes("send")}>
               <ul>
                 <li>
                   <Link
@@ -93,7 +125,7 @@ export default function Menu({
                     }`}
                     onClick={onClose}
                   >
-                    등록
+                    등록하기
                   </Link>
                 </li>
               </ul>

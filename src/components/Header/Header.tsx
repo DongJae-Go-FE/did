@@ -72,7 +72,56 @@ export default function Header() {
                   setIsOpen(false);
                 }}
               >
-                <Link href="/send" className={LinkStyle}>
+                <Link href="/did/introduce" className={LinkStyle}>
+                  <span
+                    className={`${
+                      pathName.includes("did") ? oneDepthOnStyle : oneDepthStyle
+                    } ${liSpanStyle}`}
+                  >
+                    DID란
+                  </span>
+                </Link>
+                <div className={depthStyle}>
+                  <ul className={depthUlStyle}>
+                    <li className={depthLiStyle}>
+                      <Link className={depthLinkStyle} href="/did/introduce">
+                        <span
+                          className={`${depthSpanStyle} ${
+                            pathName === "/did/introduce"
+                              ? twoDepthOnStyle
+                              : twoDepthStyle
+                          }`}
+                        >
+                          DID 소개
+                        </span>
+                      </Link>
+                    </li>
+                    <li className={depthLiStyle}>
+                      <Link className={depthLinkStyle} href="/did/date">
+                        <span
+                          className={`${depthSpanStyle} ${
+                            pathName === "/did/date"
+                              ? twoDepthOnStyle
+                              : twoDepthStyle
+                          }`}
+                        >
+                          DID 일정
+                        </span>
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li
+                className={liStyle}
+                onMouseEnter={() => {
+                  setIsOpen(true);
+                }}
+                onMouseLeave={() => {
+                  setIsOpen(false);
+                }}
+              >
+                <Link href="/did/introduce" className={LinkStyle}>
                   <span
                     className={`${
                       pathName.includes("send")
@@ -80,7 +129,7 @@ export default function Header() {
                         : oneDepthStyle
                     } ${liSpanStyle}`}
                   >
-                    메뉴1
+                    등록
                   </span>
                 </Link>
                 <div className={depthStyle}>
@@ -94,7 +143,7 @@ export default function Header() {
                               : twoDepthStyle
                           }`}
                         >
-                          등록
+                          등록하기
                         </span>
                       </Link>
                     </li>
