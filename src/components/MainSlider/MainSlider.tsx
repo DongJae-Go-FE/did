@@ -101,7 +101,7 @@ export default function MainSlider() {
   };
 
   const viewportStyle =
-    "flicking-viewport relative w-full tablet:h-full mobile:h-[calc(100dvh-56px)] flicking-hidden";
+    "flicking-viewport relative w-full mobile:h-[calc(100dvh-56px)] flicking-hidden";
   const cameraStyle = "flicking-camera";
   const panelStyle = "panel";
   const slideAreaStyle = "h-full w-full";
